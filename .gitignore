@@ -1,0 +1,14 @@
+target/
+project/boot/
+.idea/
+.idea_modules/
+*.log
+*.DS_Store
+.lvimrc
+.project
+.classpath
+*-local.conf
+tags
+.cache
+bin/
+.settings/
