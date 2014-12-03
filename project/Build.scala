@@ -34,7 +34,7 @@ object MyBuild extends Build {
       exclude("org.apache.thrift", "libthrift")
     )),
     allDependencies ~= logging,
-    updateOptions := updateOptions.value.withConsolidatedResolution(true).withLatestSnapshots(false),
+    updateOptions := updateOptions.value.withCachedResolution(true),
     libraryDependencies ++= Seq("com.typesafe.akka" %% "akka-multi-node-testkit" % "2.3.6" % "test", "org.scalatest" %% "scalatest" % "2.1.2" % "test"),
     // make sure that MultiJvm test are compiled by the default test compilation
     compile in MultiJvm <<= (compile in MultiJvm) triggeredBy (compile in Test),
